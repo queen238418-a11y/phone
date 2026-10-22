@@ -436,10 +436,10 @@ button:focus-visible { outline: 3px solid #007aff; outline-offset: 3px; }
 .status .status-icons {
   /* 여기 숫자로 크기 조절 */
   --wifi-width: 21px;
-  --wifi-height: 17px;
+  --wifi-height: 14px;
   --battery-width: 30px;
-  --battery-height: 18px;
-  --battery-number-size: 13px;
+  --battery-height: 15px;
+  --battery-number-size: 12px;
 
   /* 배터리 빈 부분과 숫자의 공통 색상 */
   --battery-gray: #a3a3a8;
