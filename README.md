@@ -343,10 +343,41 @@ button:focus-visible { outline: 3px solid #007aff; outline-offset: 3px; }
 <body>
 <div class="phone">
   <div class="wallpaper" id="wallpaper"></div>
-  <div class="status">
-    <span id="statusTime"></span>
-    <span>▮▮▮ &nbsp; 5G &nbsp; ▰</span>
+ <div class="status">
+  <span class="carrier">SKT</span>
+
+  <div class="status-icons">
+    <!-- 통신 신호 -->
+    <svg width="22" height="18" viewBox="0 0 22 18"
+      aria-label="통신 신호">
+      <rect x="0" y="12" width="4" height="6" rx="1.3" fill="currentColor"/>
+      <rect x="6" y="8" width="4" height="10" rx="1.3" fill="currentColor"/>
+      <rect x="12" y="4" width="4" height="14" rx="1.3" fill="currentColor"/>
+      <rect x="18" y="0" width="4" height="18" rx="1.3"
+        fill="currentColor" opacity=".3"/>
+    </svg>
+
+    <!-- 와이파이 -->
+    <svg width="23" height="18" viewBox="0 0 24 19"
+      aria-label="와이파이">
+      <path d="M2 5 Q12 -3 22 5"
+        fill="none" stroke="currentColor" stroke-width="3.5"/>
+      <path d="M5.5 10 Q12 4.5 18.5 10"
+        fill="none" stroke="currentColor" stroke-width="3.5"/>
+      <path d="M9 14 Q12 11.5 15 14 L12 18 Z"
+        fill="currentColor"/>
+    </svg>
+
+    <!-- 배터리 -->
+    <div class="battery" aria-label="배터리 74퍼센트">
+      <div class="battery-fill"></div>
+      <span>74</span>
+    </div>
   </div>
+
+  <!-- 기존 시계 기능 유지용 -->
+  <span id="statusTime" hidden></span>
+</div>
   <div class="island"></div>
 
   <section class="screen lock" id="lock">
