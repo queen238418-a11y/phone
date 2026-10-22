@@ -343,7 +343,7 @@ button:focus-visible { outline: 3px solid #007aff; outline-offset: 3px; }
 <body>
 <div class="phone">
   <div class="wallpaper" id="wallpaper"></div>
- <div class="status">
+<div class="status">
   <span class="carrier">SKT</span>
 
   <div class="status-icons">
