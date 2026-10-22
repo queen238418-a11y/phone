@@ -1,3 +1,4 @@
+# Phone
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -440,7 +441,7 @@ const SETTINGS = {
   owner: "휴대폰 주인 이름",
 
   // 배경 이미지를 올린 뒤 "wallpaper.jpg"처럼 입력
-  wallpaper: "",
+  wallpaper: "다운로드 (9).jpg",
 
   // 잠금 해제 후 몇 초 뒤에 문자가 올지
   messageAfter: 12,
