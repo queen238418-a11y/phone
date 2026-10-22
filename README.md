@@ -337,6 +337,84 @@ button:focus-visible { outline: 3px solid #007aff; outline-offset: 3px; }
     border-radius: 0;
   }
 }
+/* 상단 상태 표시줄 */
+.status {
+  top: 19px;
+  left: 25px;
+  right: 23px;
+  height: 23px;
+  color: #000;
+}
+
+.carrier {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -.4px;
+}
+
+.status-icons {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #000;
+}
+
+/* 오른쪽 아이콘 아래 짧은 선 */
+.status-icons::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  bottom: -11px;
+  width: 57px;
+  height: 3px;
+  border-radius: 5px;
+  background: #000;
+  opacity: .65;
+}
+
+.battery {
+  position: relative;
+  width: 29px;
+  height: 17px;
+  border-radius: 5px;
+  background: #0003;
+  isolation: isolate;
+}
+
+.battery::after {
+  content: "";
+  position: absolute;
+  right: -3px;
+  top: 5px;
+  width: 2px;
+  height: 7px;
+  border-radius: 0 2px 2px 0;
+  background: #0006;
+}
+
+.battery-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 74%;
+  border-radius: 5px 0 0 5px;
+  background: #000;
+}
+
+.battery span {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  font-weight: 800;
+  color: #000;
+  text-shadow:
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+}
 </style>
 </head>
 
