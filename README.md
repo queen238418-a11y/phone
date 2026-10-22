@@ -415,6 +415,93 @@ button:focus-visible { outline: 3px solid #007aff; outline-offset: 3px; }
     -1px 1px 0 #fff,
     1px 1px 0 #fff;
 }
+<style>
+.status {
+  position: absolute;
+  top: 19px;
+  left: 25px;
+  right: 23px;
+  height: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #000;
+}
+
+.carrier {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.status-icons {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #000;
+}
+
+.status-icons svg {
+  display: block;
+  flex-shrink: 0;
+}
+
+.battery {
+  position: relative;
+  flex-shrink: 0;
+  width: 29px;
+  height: 18px;
+  border-radius: 5px;
+  background: #0002;
+  overflow: visible;
+}
+
+.battery-fill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 74%;
+  background: #fff;
+  border-radius: 5px 0 0 5px;
+}
+
+.battery span {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1;
+  text-shadow: none;
+}
+
+.battery::after {
+  content: "";
+  position: absolute;
+  right: -3px;
+  top: 5px;
+  width: 2px;
+  height: 8px;
+  border-radius: 0 2px 2px 0;
+  background: #0006;
+}
+
+.status-icons::after {
+  content: "";
+  position: absolute;
+  right: 9px;
+  bottom: -10px;
+  width: 57px;
+  height: 3px;
+  border-radius: 5px;
+  background: #000;
+  opacity: .65;
+}
+</style>
 </style>
 </head>
 
