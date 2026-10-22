@@ -432,76 +432,84 @@ button:focus-visible { outline: 3px solid #007aff; outline-offset: 3px; }
   font-size: 16px;
   font-weight: 500;
 }
+<style>
+.status .status-icons {
+  /* 여기 숫자로 크기 조절 */
+  --wifi-width: 21px;
+  --wifi-height: 17px;
+  --battery-width: 30px;
+  --battery-height: 18px;
+  --battery-number-size: 13px;
 
-.status-icons {
-  position: relative;
+  /* 배터리 빈 부분과 숫자의 공통 색상 */
+  --battery-gray: #a3a3a8;
+
   display: flex;
   align-items: center;
   gap: 7px;
-  color: #000;
 }
 
-.status-icons svg {
+/* 와이파이 크기 */
+.status .status-icons > svg:nth-of-type(2) {
+  width: var(--wifi-width);
+  height: var(--wifi-height);
   display: block;
   flex-shrink: 0;
 }
 
-.battery {
+/* 배터리의 회색 바탕 */
+.status .battery {
   position: relative;
+  width: var(--battery-width);
+  height: var(--battery-height);
   flex-shrink: 0;
-  width: 29px;
-  height: 18px;
+  padding: 0;
+  border: none;
   border-radius: 5px;
-  background: #0002;
-  overflow: visible;
+  background: var(--battery-gray);
 }
 
-.battery-fill {
+/* 충전된 부분: 검정 */
+.status .battery-fill {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0 auto 0 0;
   width: 74%;
-  background: #fff;
+  background: #000;
   border-radius: 5px 0 0 5px;
+  z-index: 0;
 }
 
-.battery span {
+/* 숫자: 정중앙, 얇게, 회색 */
+.status .battery span {
   position: absolute;
   inset: 0;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #000;
-  font-size: 14px;
-  font-weight: 800;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  font-size: var(--battery-number-size);
+  font-weight: 400;
   line-height: 1;
+  letter-spacing: 0;
+  color: var(--battery-gray);
   text-shadow: none;
 }
 
-.battery::after {
+/* 배터리 오른쪽 돌출 부분 */
+.status .battery::after {
   content: "";
   position: absolute;
   right: -3px;
-  top: 5px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 2px;
-  height: 8px;
+  height: 7px;
   border-radius: 0 2px 2px 0;
-  background: #0006;
+  background: var(--battery-gray);
 }
-
-.status-icons::after {
-  content: "";
-  position: absolute;
-  right: 9px;
-  bottom: -10px;
-  width: 57px;
-  height: 3px;
-  border-radius: 5px;
-  background: #000;
-  opacity: .65;
-}
-</style>
 </style>
 </head>
 
